@@ -1,14 +1,13 @@
 package com.company;
 
-public abstract class System {
+public abstract class Bruger {
     private String fornavn;
     private String efternavn;
     private String brugernavn;
     private String kodeord;
 
-    public System (){}
 
-    public System(String fornavn, String efternavn, String brugernavn, String kodeord) {
+    public Bruger(String fornavn, String efternavn, String brugernavn, String kodeord) {
         this.fornavn = fornavn;
         this.efternavn= efternavn;
         this.brugernavn=brugernavn;
