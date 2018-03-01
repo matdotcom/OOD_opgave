@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class Kurser {
+public class Kurser {
 
 
 
