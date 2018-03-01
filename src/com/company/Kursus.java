@@ -1,11 +1,16 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Kursus {
     private String navn;
     private Ugedage ugedag;
     private Underviser underviser;
     private String mødetid;
     private FagType fagType;
+    ArrayList<Studerende> studerendeIKursusArrayList = new ArrayList<Studerende>();
+    ArrayList<Underviser> underviserIKursusArrayList = new ArrayList<Underviser>();
+
 
     public Kursus (String navn){
         this.navn = navn;
@@ -17,6 +22,16 @@ public class Kursus {
         this.underviser = underviser;
         this.mødetid = mødetid;
         System.out.println("Kursus : " + navn + " Oprettet.");
+    }
+
+    void joinKursusArrayStud(Studerende studerende){
+        studerendeIKursusArrayList.add(studerende);
+        System.out.println("Studerende joined.");
+    }
+    void joinKursusArrayUniv(Underviser underviser){
+
+        underviserIKursusArrayList.add(underviser);
+        System.out.println("Underviser Joined");
     }
 
     public String getNavn() {

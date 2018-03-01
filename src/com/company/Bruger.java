@@ -15,6 +15,8 @@ public abstract class Bruger {
     }
 
 
+
+
     public String getFornavn() {
         return fornavn;
     }

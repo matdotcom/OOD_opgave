@@ -15,4 +15,9 @@ public class Studerende extends Bruger {
         this.kodeord = kodeord;
     }
 
+
+    public void joinKursus(Studerende studerende,Kursus kursus){
+
+        System.out.println("YOu have succesfully joined the kursus;");
+    }
 }

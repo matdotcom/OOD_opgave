@@ -12,6 +12,8 @@ public class Main {
         System.out.println(studerende1.getBrugernavn());
         db_arrayList.arrayAfAlleStuderende.add(studerende1);
         System.out.println(db_arrayList.arrayAfAlleStuderende);
+        Studerende studerende2 = new Studerende("Mathias","WIth Big DICKER","yee","password");
+
 
         Underviser underviser = new Underviser("Ni2gga","WIth Big DICKER","yee","qpowe");
         System.out.println(db_arrayList.arrayAfAlleUndervisere.add(underviser));
@@ -22,6 +24,13 @@ public class Main {
         Kursus kursus1 = new Kursus("DIld plukning 102", Ugedage.onsdag,FagType.VAERKSTED,underviser,"80:30");
         db_arrayList.arrayAfAlleKursus.add(kursus1);
         System.out.println(db_arrayList.arrayAfAlleKursus);
+
+        kursus.joinKursusArray(studerende1);
+        kursus.joinKursusArray(studerende2);
+
+        kursus1.joinKursusArray(studerende1);
+        System.out.println(kursus.studerendeIKursusArrayList);
+        System.out.println(kursus1.studerendeIKursusArrayList);
 
 
 
