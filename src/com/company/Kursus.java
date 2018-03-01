@@ -9,7 +9,6 @@ public class Kursus {
     private String mødetid;
     private FagType fagType;
     ArrayList<Studerende> studerendeIKursusArrayList = new ArrayList<Studerende>();
-    ArrayList<Underviser> underviserIKursusArrayList = new ArrayList<Underviser>();
 
 
     public Kursus (String navn){
@@ -24,14 +23,17 @@ public class Kursus {
         System.out.println("Kursus : " + navn + " Oprettet.");
     }
 
-    void joinKursusArrayStud(Studerende studerende){
+
+
+
+    void placeStudentInArray(Studerende studerende){
         studerendeIKursusArrayList.add(studerende);
         System.out.println("Studerende joined.");
     }
-    void joinKursusArrayUniv(Underviser underviser){
 
-        underviserIKursusArrayList.add(underviser);
-        System.out.println("Underviser Joined");
+    void removeStudentFromArray(Studerende studerende){
+        studerendeIKursusArrayList.remove(studerende);
+        System.out.println("Student kicked out. ");
     }
 
     public String getNavn() {

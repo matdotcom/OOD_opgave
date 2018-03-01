@@ -3,34 +3,39 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("hello");
         DB_ArrayList db_arrayList = new DB_ArrayList();
 
-        System.out.println("hello");
+        //Nye studerende
+        Studerende jens = new Studerende("Jens","Hansen","Jenseren","password");
+        Studerende hans = new Studerende("Hans","Reakd","Sheif","password123");
 
-        System.out.println(db_arrayList.arrayAfAlleStuderende);
-        Studerende studerende1 = new Studerende("Nigga","WIth Big DICKER","yee","password");
-        System.out.println(studerende1.getBrugernavn());
-        db_arrayList.arrayAfAlleStuderende.add(studerende1);
-        System.out.println(db_arrayList.arrayAfAlleStuderende);
-        Studerende studerende2 = new Studerende("Mathias","WIth Big DICKER","yee","password");
+        //ny Underviser
+        Underviser frank = new Underviser("frank","Hansen","reall","123456");
 
 
-        Underviser underviser = new Underviser("Ni2gga","WIth Big DICKER","yee","qpowe");
-        System.out.println(db_arrayList.arrayAfAlleUndervisere.add(underviser));
-        System.out.println(db_arrayList.arrayAfAlleUndervisere);
+        //Nye kurser
+        Kursus dildplukning = new Kursus("Dildplukning", Ugedage.fredag,FagType.VAERKSTED,frank, "halv 8." );
+        Kursus næsepildning = new Kursus("NæsePildning", Ugedage.fredag,FagType.SPROG,frank,"Her og Nu.");
 
-        Kursus kursus = new Kursus("DIld plukning 101", Ugedage.onsdag,FagType.VAERKSTED,underviser,"80:30");
-        db_arrayList.arrayAfAlleKursus.add(kursus);
-        Kursus kursus1 = new Kursus("DIld plukning 102", Ugedage.onsdag,FagType.VAERKSTED,underviser,"80:30");
-        db_arrayList.arrayAfAlleKursus.add(kursus1);
-        System.out.println(db_arrayList.arrayAfAlleKursus);
+        //Students joiner et fag.
+        jens.joinKursus(jens,dildplukning);
+        hans.joinKursus(hans,dildplukning);
 
-        kursus.joinKursusArray(studerende1);
-        kursus.joinKursusArray(studerende2);
+        jens.joinKursus(jens,næsepildning);
 
-        kursus1.joinKursusArray(studerende1);
-        System.out.println(kursus.studerendeIKursusArrayList);
-        System.out.println(kursus1.studerendeIKursusArrayList);
+        System.out.println(næsepildning.studerendeIKursusArrayList);
+
+
+        System.out.println(dildplukning.studerendeIKursusArrayList);
+        System.out.println(dildplukning.getUnderviser());
+
+        //Studenter leaver et fag
+        jens.leaveKursus(jens,dildplukning);
+
+        System.out.println(dildplukning.studerendeIKursusArrayList);
+        System.out.println(dildplukning.getUnderviser());
+
 
 
 
