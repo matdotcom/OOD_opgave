@@ -3,19 +3,20 @@ package com.company;
 public class Kursus {
     private String navn;
     private Ugedage ugedag;
-    private Kurser kurser;
     private Underviser underviser;
     private String mødetid;
+    private FagType fagType;
 
     public Kursus (String navn){
         this.navn = navn;
     }
-    public Kursus(String navn,Ugedage ugedag,Kurser kurser, Underviser underviser, String mødetid){
+    public Kursus(String navn,Ugedage ugedag,FagType fagType, Underviser underviser, String mødetid){
         this.navn = navn;
         this.ugedag = ugedag;
-        this.kurser = kurser;
+        this.fagType = fagType;
         this.underviser = underviser;
         this.mødetid = mødetid;
+        System.out.println("Kursus : " + navn + " Oprettet.");
     }
 
     public String getNavn() {
@@ -34,12 +35,12 @@ public class Kursus {
         this.ugedag = ugedag;
     }
 
-    public Kurser getKurser() {
-        return kurser;
+    public FagType getFagtype() {
+        return fagType;
     }
 
-    public void setKurser(Kurser kurser) {
-        this.kurser = kurser;
+    public void setFagType(FagType fagType) {
+        this.fagType = fagType;
     }
 
     public Underviser getUnderviser() {

@@ -1,7 +1,6 @@
 package com.company;
 
 public class Studerende extends Bruger {
-    DB_ArrayList db_arrayList = new DB_ArrayList();
 
     private String fornavn;
     private String efternavn;
