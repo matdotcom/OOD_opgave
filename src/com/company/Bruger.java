@@ -14,6 +14,7 @@ public abstract class Bruger {
         this.kodeord=kodeord;
     }
 
+
     public String getFornavn() {
         return fornavn;
     }
@@ -44,5 +45,16 @@ public abstract class Bruger {
 
     public void setKodeord(String kodeord) {
         this.kodeord = kodeord;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Bruger{" +
+                "fornavn='" + fornavn + '\'' +
+                ", efternavn='" + efternavn + '\'' +
+                ", brugernavn='" + brugernavn + '\'' +
+                ", kodeord='" + kodeord + '\'' +
+                '}';
     }
 }
