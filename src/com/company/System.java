@@ -1,6 +1,6 @@
 package com.company;
 
-public class System {
+public abstract class System {
     private String fornavn;
     private String efternavn;
     private String brugernavn;
