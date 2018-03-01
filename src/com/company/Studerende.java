@@ -14,7 +14,6 @@ public class Studerende extends Bruger {
         this.efternavn = efternavn;
         this.brugernavn = brugernavn;
         this.kodeord = kodeord;
-        Studerende studerende = new Studerende(fornavn, efternavn, brugernavn, kodeord);
-        db_arrayList.arrayAfAlleStuderende.add(studerende);
     }
+
 }
