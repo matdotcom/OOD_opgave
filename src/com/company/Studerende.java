@@ -49,4 +49,5 @@ public class Studerende extends Bruger {
             System.out.println("You are not enrolling in this subject.");
         }
     }
+
 }

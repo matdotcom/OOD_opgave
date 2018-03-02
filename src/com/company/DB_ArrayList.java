@@ -10,4 +10,7 @@ public class DB_ArrayList {
     ArrayList<Underviser> arrayAfAlleUndervisere = new ArrayList<Underviser>();
 
 
+
+
+
 }

@@ -36,6 +36,9 @@ public class Main {
         System.out.println(dildplukning.studerendeIKursusArrayList);
         System.out.println(dildplukning.getUnderviser());
 
+        LoginView loginView = new LoginView();
+        loginView.openLoginScreen();
+
 
 
 

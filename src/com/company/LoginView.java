@@ -6,15 +6,10 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class LoginView {
-	//arraylist til at brugernavne.
-	//ArrayList<String> alleBrugernavne = new ArrayList<String>();
 
 
-	public static void main(String[] args) {
-
-		Studerende jens = new Studerende("Jens","Hansen","Jenseren","password");
-
-		JFrame frame = new JFrame("Login Screen.");
+	void openLoginScreen(){
+		JFrame frame = new JFrame("Login skærm");
 		frame.setSize(300, 150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -23,9 +18,11 @@ public class LoginView {
 		placeComponents(panel);
 
 		frame.setVisible(true);
+
 	}
 
 	private static void placeComponents(JPanel panel) {
+		ButtonActions buttonActions = new ButtonActions();
 		//DB_ArrayList db_arrayList = new DB_ArrayList();
 		KnapperMethoder knapperMethoder = new KnapperMethoder();
 
@@ -38,6 +35,7 @@ public class LoginView {
 		JTextField userText = new JTextField(20);
 		userText.setBounds(100, 10, 160, 25);
 		panel.add(userText);
+
 
 		JLabel passwordLabel = new JLabel("Password");
 		passwordLabel.setBounds(10, 40, 80, 25);
@@ -53,13 +51,7 @@ public class LoginView {
 		panel.add(loginButton);
 
 		//Klik på login knappen
-		loginButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				knapperMethoder.checkOmBrugerNavnErRigtigt(userText.getText());
-
-			}
-		});
+		buttonActions.openWindow(loginButton);
 		
 
 	}
