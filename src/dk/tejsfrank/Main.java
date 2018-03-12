@@ -9,6 +9,7 @@ public class Main {
         //Nye studerende
         Studerende jens = new Studerende("Jens","Hansen","Jenseren","password");
         Studerende hans = new Studerende("Hans","Reakd","Sheif","password123");
+        Studerende test = new Studerende("yeah","heyo","test","test");
 
         //ny Underviser
         Underviser frank = new Underviser("frank","Hansen","reall","123456");
@@ -36,6 +37,8 @@ public class Main {
         System.out.println(dildplukning.studerendeIKursusArrayList);
         System.out.println(dildplukning.getUnderviser());
 
+
+        //Åbner window.
         LoginView loginView = new LoginView();
         loginView.openLoginScreen();
 
